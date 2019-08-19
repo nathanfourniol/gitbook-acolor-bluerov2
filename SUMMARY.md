@@ -10,9 +10,9 @@
   * [Depth control](topside-computer/controllers/depth-control.md)
   * [Heading control](topside-computer/controllers/heading-control.md)
   * [Velocity control](topside-computer/controllers/velocity-control.md)
+  * [Gamepad](topside-computer/controllers/gamepad.md)
 * [Commander](topside-computer/commander.md)
 * [Graphical User Interface \(GUI\)](topside-computer/untitled.md)
-* [Gamepad](topside-computer/gamepad.md)
 * [Additional IMUs](topside-computer/additional-imus.md)
 
 ## Companion computer
