@@ -1,4 +1,4 @@
-# Prerequisite
+# Required configuration
 
 ## OS
 
@@ -7,8 +7,6 @@ Ubuntu 16.04
 ## Network settings : IP configuration
 
 Topside computer must be at the address 192.168.2.1
-
-For Ubuntu 16.04 : TUTO
 
 ## Dependencies
 

@@ -1,6 +1,0 @@
-# Additional IMUs
-
-## IMUs
-
-## Server
-

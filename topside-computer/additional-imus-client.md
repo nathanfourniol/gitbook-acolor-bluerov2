@@ -4,5 +4,5 @@ description: >-
   estimation of the velocity
 ---
 
-# Additional IMUs
+# Additional IMUs client
 

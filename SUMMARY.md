@@ -4,7 +4,7 @@
 
 ## Topside computer
 
-* [Prerequisite](topside-computer/prerequisite.md)
+* [Required configuration](topside-computer/prerequisite.md)
 * [Launch ROS implementation](topside-computer/launch-ros-implementation.md)
 * [Controllers](topside-computer/controllers/README.md)
   * [Depth control](topside-computer/controllers/depth-control.md)
@@ -13,12 +13,12 @@
   * [Gamepad](topside-computer/controllers/gamepad.md)
 * [Commander](topside-computer/commander.md)
 * [Graphical User Interface \(GUI\)](topside-computer/untitled.md)
-* [Additional IMUs](topside-computer/additional-imus.md)
+* [Additional IMUs client](topside-computer/additional-imus-client.md)
 
 ## Companion computer
 
-* [Prerequisite](companion-computer/untitled.md)
-* [Additional IMUs](companion-computer/additional-imu.md)
+* [Required configuration](companion-computer/required-configuration.md)
+* [Additional IMUs server](companion-computer/additional-imus-server.md)
 
 ## Px4-v2
 
