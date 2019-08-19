@@ -11,15 +11,23 @@ description: >-
 The BlueRov2 is a small ROV made and sold by the company Bluerobotics \([https://bluerobotics.com/store/rov/bluerov2/bluerov2/](https://bluerobotics.com/store/rov/bluerov2/bluerov2/)\). The ROV that we worked on has:
 
 * 6 Thrusters T200 \([https://bluerobotics.com/store/thrusters/t100-t200-thrusters/t200-thruster/](https://bluerobotics.com/store/thrusters/t100-t200-thrusters/t200-thruster/)\)
+* 6 Basic Esc
 * 1 Bar30 pressure sensor \(link\) 
+* 2 Leak sensors
+* 4 Lumen Subsea Lights
+* 1 Raspberry Pi 3B
+* 1 camera
+* 1 servo for the camera tilt
+* 1 PixHawk \(Px4-v2\)
+* 1 Fathom ROV tether
 
-## Hardware to run Ardusub
+A more detailed list of the ROV component can be found at [https://bluerobotics.com/store/rov/bluerov2/bluerov2/](https://bluerobotics.com/store/rov/bluerov2/bluerov2/)
 
-See [http://www.ardusub.com/hardware/components.html\#rov-components](http://www.ardusub.com/hardware/components.html#rov-components) for a great overview of the component.
+![Image 1 : Overview of the BlueRov2](.gitbook/assets/bluerov2-features-small.png)
 
-## Software
+## Connection
 
-See [http://www.ardusub.com/software/components.html](http://www.ardusub.com/software/components.html) 
+According to the ArduSub documentation, The BlueRov2 requier a to be linked to a topside computer. Image 2 shows a diagram of how it is connected to a topside controller.
 
-
+![Image 2 : Overview of the BlueRov2 connections](.gitbook/assets/acolorbluerov2softdiagram.png)
 
