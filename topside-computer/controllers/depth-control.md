@@ -40,7 +40,7 @@ $$
 
 ## PID controller
 
-The PID controller use the difference between depth calculated and depth desired, but also the derivative and the integrate value to compute a command in the interval \[-400,+400\]. This command is add to 1500, the pwm neutral of thrusters.
+The PID controller use the difference between depth calculated and depth desired, but also the derivative and the integrate values to compute a command in the interval \[-400,+400\]. This command is add to 1500, the pwm neutral of thrusters.
 
 ## Saturation
 
