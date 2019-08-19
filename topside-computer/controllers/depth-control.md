@@ -43,15 +43,19 @@ The PID controller use the difference between depth calculated and depth desired
 
 ## Saturation
 
-A saturation method is added before the publication on the command topic in case of a will to limit thruster power.
+A saturation method is added on pwm output before the publication on the command topic in case of a will to limit thruster power.  
 
 ## Send depth target
 
-The depth target is defined by the publication of a Set\_target message on the topic /Settings/set\_target. There are several methods to publish on this topic : the GUI, command line, script, ...
+The depth target is defined by the publication of a Set\_target message on the topic /Settings/set\_target. 
+
+{% hint style="info" %}
+Several methods exist to publish the message : the GUI, command line, script, ....
+{% endhint %}
 
 Set\_target message : 
 
-| Type | Field name |
+| Set\_target message :  |  |
 | ---: | :--- |
 | float64 | depth\_desired |
 | float64 | heading\_desired |
@@ -63,5 +67,7 @@ rostopic publish -? message
 
 ## Tune PID and set saturation
 
-To change PID coefficient you can use the GUI
+PID coefficients and maximum pwm for saturation of the command can be modified in real time by the Set\_depth message published on the topic /Settings/set\_depth. However these values send are not saved and the controller will get its initial value.
+
+To change permanently the values of those parameters you must change it in the code, in the \_\_init\_\_ methode.
 
