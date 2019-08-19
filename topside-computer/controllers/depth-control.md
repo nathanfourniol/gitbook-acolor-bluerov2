@@ -32,6 +32,7 @@ $$
 
 | Designation | Meaning | Value |
 | :---: | :---: | :---: |
+| depth | current depth | m |
 | p | pressure measured | Pa |
 | p0  | surface pressure | 99 000Pa |
 | ρ  | water density | 1000 kg/m³ |
@@ -47,27 +48,39 @@ A saturation method is added on pwm output before the publication on the command
 
 ## Send depth target
 
-The depth target is defined by the publication of a Set\_target message on the topic /Settings/set\_target. 
+The depth target is defined by the publication of a Set\_target message on the topic /Settings/set\_target. This message is shared with the heading and the velocity controller to set their target
 
 {% hint style="info" %}
 Several methods exist to publish the message : the GUI, command line, script, ....
 {% endhint %}
 
-Set\_target message : 
+| Set\_target message :  |  | Units |
+| ---: | :--- | :--- |
+| float64 | depth\_desired | m |
+| float64 | heading\_desired | deg |
+| float64 | velocity\_desired | m/s |
 
-| Set\_target message :  |  |
-| ---: | :--- |
-| float64 | depth\_desired |
-| float64 | heading\_desired |
-| float64 | velocity\_desired |
-
-```text
-rostopic publish -? message
-```
+{% hint style="warning" %}
+In this script, the axis Z for the depth goes up. To reach 1m depth the input must be -1
+{% endhint %}
 
 ## Tune PID and set saturation
 
-PID coefficients and maximum pwm for saturation of the command can be modified in real time by the Set\_depth message published on the topic /Settings/set\_depth. However these values send are not saved and the controller will get its initial value.
+PID coefficients and maximum pwm for saturation of the command can be modified in real time by the Set\_depth message published on the topic /Settings/set\_depth. 
 
-To change permanently the values of those parameters you must change it in the code, in the \_\_init\_\_ methode.
+{% hint style="danger" %}
+ These values send are not saved and the controller will get its initial value. To change permanently the values of those parameters you must change it in the code, in the \_\_init\_\_ method.
+{% endhint %}
+
+| Set\_depth message |  |
+| ---: | :--- |
+| bool | enable\_depth\_ctrl |
+| uint16 | pwm\_max |
+| uint32 | KI |
+| uint32 | KP |
+| uint32 | KD |
+
+{% hint style="info" %}
+See [Commander](../commander.md) to know how enable\_depth\_ctrl is used
+{% endhint %}
 
