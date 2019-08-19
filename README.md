@@ -27,7 +27,7 @@ A more detailed list of the ROV component can be found at [https://bluerobotics.
 
 ## Connection
 
-According to the ArduSub documentation, The BlueRov2 requier a to be linked to a topside computer. Image 2 shows a diagram of how it is connected to a topside controller.
+According to the ArduSub documentation, The BlueRov2 require a to be linked to a topside computer. Image 2 shows a diagram of how it is connected to a topside controller with the ROS implementation.
 
 ![Image 2 : Overview of the BlueRov2 connections](.gitbook/assets/acolorbluerov2softdiagram.png)
 
