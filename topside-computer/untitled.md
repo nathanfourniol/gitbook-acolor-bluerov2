@@ -1,2 +1,2 @@
-# Untitled
+# Graphical User Interface \(GUI\)
 

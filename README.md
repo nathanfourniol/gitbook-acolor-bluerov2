@@ -18,7 +18,8 @@ The BlueRov2 is a small ROV made and sold by the company Bluerobotics \([https:/
 * 1 Raspberry Pi 3B
 * 1 camera
 * 1 servo for the camera tilt
-* 1 PixHawk \(Px4-v2\)
+* 1 PixHawk \(Px4-v2\) : with internal 9 DOF IMU
+* 2 Adafruit IMU : ref 9DOF
 * 1 Fathom ROV tether
 
 A more detailed list of the ROV component can be found at [https://bluerobotics.com/store/rov/bluerov2/bluerov2/](https://bluerobotics.com/store/rov/bluerov2/bluerov2/)
