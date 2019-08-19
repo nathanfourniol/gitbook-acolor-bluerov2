@@ -52,8 +52,8 @@ The depth target is defined by the publication of a Set\_target message on the t
 Set\_target message : 
 
 | Type | Field name |
-| :--- | :--- |
-| float64      | depth\_desired |
+| ---: | :--- |
+| float64 | depth\_desired |
 | float64 | heading\_desired |
 | float64 | velocity\_desired |
 
