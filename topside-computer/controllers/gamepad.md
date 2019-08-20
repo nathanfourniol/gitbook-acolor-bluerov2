@@ -65,10 +65,18 @@ The inputs library provides API to handle the events from gamepad. Based on the 
 
 | Parameters | Type | Description |
 | :--- | :--- | :--- |
-| THROTTLE | UInt16 | pwm |
-| YAW | UInt16 | pwm |
-| FORWARD | UInt16 | pwm |
-| LATERAL | UInt16 | pwm |
+| THROTTLE | Float32 | pwm : Uint16  \[1100-1900\]range |
+| YAW | Float32 | pwm : Uint16  \[1100-1900\]range |
+| FORWARD | Float32 | pwm : Uint16  \[1100-1900\]range |
+| LATERAL | Float32 | pwm : Uint16  \[1100-1900\]range |
 | ARM | Int32 | 0 : disarm ; 1 : arm |
 | OVERRIDE\_CONTROLLER | Int32 | 0 : AUTOMATIC mode, 1 : MANUAL mode |
+| PWM\_CAM | Int32 | pwm for camera tilt |
+| LIGHT\_DEC | Int32 | 1 if you want to decrease brightness, else 0 |
+| LIGHT\_INC | Int32 | 1 if you want to increase brightness, else 0 |
+| GAIN\_LIGHT | Int32 | result of gain light |
+
+{% hint style="info" %}
+The LIGHT\_DEC, LIGHT\_INC, GAIN\_LIGHT parameters are not used
+{% endhint %}
 
