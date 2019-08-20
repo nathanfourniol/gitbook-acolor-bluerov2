@@ -20,13 +20,13 @@
 * [Required configuration](companion-computer/required-configuration.md)
 * [Additional IMUs server](companion-computer/additional-imus-server.md)
 
-## Px4-v2
+## ArduSub
 
-* [Untitled](px4-v2/untitled.md)
+* [ArduSub](ardusub/untitled.md)
 
 ## MAVlink message
 
-* [Untitled](mavlink-message/untitled.md)
+* [Pymavlink](mavlink-message/pymavlink.md)
 
 ## Configure new frame
 
