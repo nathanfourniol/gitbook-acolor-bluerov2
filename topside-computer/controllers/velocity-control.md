@@ -8,7 +8,7 @@ description: description of velocity_controller.py
 Not working as controller yet because of difficulties to estimate velocity see [here](velocity-control.md#velocity-estimation)
 {% endhint %}
 
-The class Velocity\_controller implements a PD controller in order to follow the heading desired.
+The class Velocity\_controller implements a PD controller in order to reach the velocity desired.
 
 ## ROS topics
 
