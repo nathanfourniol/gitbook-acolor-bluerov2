@@ -6,6 +6,8 @@
 
 * [Required configuration](topside-computer/prerequisite.md)
 * [Launch ROS implementation](topside-computer/launch-ros-implementation.md)
+* [ROS architecture and File System](topside-computer/ros-architecture-and-file-system.md)
+* [ROS-MAVlink bridge](topside-computer/ros-mavlink-bridge.md)
 * [Controllers](topside-computer/controllers/README.md)
   * [Depth control](topside-computer/controllers/depth-control.md)
   * [Heading control](topside-computer/controllers/heading-control.md)
@@ -18,6 +20,7 @@
 ## Companion computer
 
 * [Required configuration](companion-computer/required-configuration.md)
+* [Untitled](companion-computer/untitled.md)
 * [Additional IMUs server](companion-computer/additional-imus-server.md)
 
 ## ArduSub
