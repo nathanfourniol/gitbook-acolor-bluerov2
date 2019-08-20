@@ -8,8 +8,8 @@ The class Heading\_controller implements a PD controller in order to follow the 
 
 ## ROS topics
 
-| ROS topics subscribed | Message | Function |
-| :---: | :---: | :---: |
+| ROS topics subscribed | Message | Description |
+| :---: | :---: | :--- |
 | /BlueRov2/imu/attitude | bluerov\_ros\_playground/Attitude | Yaw in \[-pi,pi\]rad |
 | /Settings/set\_heading | bluerov\_ros\_playground/Set\_heading | Settings for the controller |
 | /Settings/set\_target | bluerov\_ros\_playground/Set\_target | Yaw to follow |
@@ -18,8 +18,8 @@ The class Heading\_controller implements a PD controller in order to follow the 
 The heading targeted must be in \[0, 360\]deg range where 0 is North, 180 is South
 {% endhint %}
 
-| ROS topics published | Message | Function |
-| :---: | :---: | :---: |
+| ROS topics published | Message | Description |
+| :---: | :---: | :--- |
 | /Command/heading | Uint16 | Pwm send by the controller to the commander |
 
 ## Heading estimation

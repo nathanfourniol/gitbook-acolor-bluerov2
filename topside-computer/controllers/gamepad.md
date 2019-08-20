@@ -54,16 +54,29 @@ The inputs library provides API to handle the events from gamepad. Based on the 
 
 ## ROS topics
 
-| ROS topics subscribed | Message | Function |
-| :--- | :--- | :--- |
+| ROS topics subscribed | Message | Description |
+| :---: | :---: | :--- |
 | /BlueRov2/arm | Bool |  The arm status |
 
-| ROS topics published | Message | Description |
-| :--- | :--- | :--- |
-| /Command/joy | sensor\_msgs/Joy | axes : \[THROTTLE, YAW, FORWARD, LATERAL\] |
-|  |  | buttons : \[ARM, OVERRIDE\_CONTROLLER, PWM\_CAM, LIGHT\_DEC, LIGHT\_INC, GAIN\_LIGHT\] |
-
-| Parameters | Type | Description |
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:center">ROS topics published</th>
+      <th style="text-align:center">Message</th>
+      <th style="text-align:left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:center">/Command/joy</td>
+      <td style="text-align:center">sensor_msgs/Joy</td>
+      <td style="text-align:left">
+        <p>axes : [THROTTLE, YAW, FORWARD, LATERAL]</p>
+        <p>buttons : [ARM, OVERRIDE_CONTROLLER, PWM_CAM, LIGHT_DEC, LIGHT_INC, GAIN_LIGHT]</p>
+      </td>
+    </tr>
+  </tbody>
+</table>| Parameters | Type | Description |
 | :--- | :--- | :--- |
 | THROTTLE | Float32 | pwm : Uint16  \[1100-1900\]range |
 | YAW | Float32 | pwm : Uint16  \[1100-1900\]range |

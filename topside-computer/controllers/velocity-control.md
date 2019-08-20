@@ -12,14 +12,14 @@ The class Velocity\_controller implements a PD controller in order to reach the 
 
 ## ROS topics
 
-| ROS topics subscribed | Message | Function |
-| :---: | :---: | :---: |
+| ROS topics subscribed | Message | Description |
+| :---: | :---: | :--- |
 | /imu/imu\_raw | sensors\_data/imu | X axis acceleration |
 | /Settings/set\_velocity | bluerov\_ros\_playground/Set\_velocity | Settings for the controller |
 | /Settings/set\_target | bluerov\_ros\_playground/Set\_target | velocity to reach, |
 
-| ROS topics published | Message | Function |
-| :---: | :---: | :---: |
+| ROS topics published | Message | Description |
+| :---: | :---: | :--- |
 | /Command/velocity | Uint16 | Pwm send by the controller to the commander |
 
 ## Velocity estimation
@@ -68,7 +68,6 @@ These values send are not saved and the controller will get its initial value. T
 | ---: | :--- |
 | bool | enable\_velocity\_ctrl |
 | uint16 | pwm\_max |
-| uint32 | KI |
 | uint32 | KP |
 | uint32 | KD |
 

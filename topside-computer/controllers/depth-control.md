@@ -8,8 +8,8 @@ The class Depth\_Control implements a PID controller in order to reach the depth
 
 ## ROS topics
 
-| ROS topics subscribed | Message | Function |
-| :---: | :---: | :---: |
+| ROS topics subscribed | Message | Description |
+| :---: | :---: | :--- |
 | /BlueRov2/bar30 | bluerov\_ros\_playground/Bar30 | Absolute pressure in hPa |
 | /Settings/set\_depth | bluerov\_ros\_playground/Set\_depth | Settings for the controller |
 | /Settings/set\_target | bluerov\_ros\_playground/Set\_target | Depth to reach, vertical axis goes up  |
@@ -18,7 +18,7 @@ The class Depth\_Control implements a PID controller in order to reach the depth
 In this script, the axis Z for the depth goes up. To reach 1m depth the input must be -1
 {% endhint %}
 
-| ROS topics published | Message | Function |
+| ROS topics published | Message | Description |
 | :--- | :--- | :--- |
 | /Command/depth | Uint16 | Pwm send by the controller to the commander |
 
