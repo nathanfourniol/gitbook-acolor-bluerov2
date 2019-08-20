@@ -20,7 +20,6 @@
 ## Companion computer
 
 * [Required configuration](companion-computer/required-configuration.md)
-* [Untitled](companion-computer/untitled.md)
 * [Additional IMUs server](companion-computer/additional-imus-server.md)
 
 ## ArduSub

@@ -6,6 +6,14 @@ description: description of the file commander.py
 
 The class Commander deals with the publication of pwm to the RC\_channels topics that leads to the motion of the BlueRov2
 
+## **ROS** 
+
+### Node
+
+Commander
+
+### Topics
+
 | ROS topics subscribed | Message | Function |
 | :---: | :---: | :---: |
 | /Command/depth | UInt16 | pwm sent by [depth controller](controllers/depth-control.md) |

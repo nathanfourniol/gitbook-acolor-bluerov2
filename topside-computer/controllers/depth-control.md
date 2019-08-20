@@ -6,7 +6,13 @@ description: description of the file depth_controller.py
 
 The class Depth\_Control implements a PID controller in order to reach the depth desired.
 
-## ROS topics
+## **ROS**
+
+### Node
+
+depth\_controller
+
+### Topics
 
 | ROS topics subscribed | Message | Description |
 | :---: | :---: | :--- |

@@ -52,7 +52,13 @@ The inputs library provides API to handle the events from gamepad. Based on the 
 | BTN\_BASE3 | \_disarm | BACK | 0 ; 1 | 4 |
 | BTN\_BASE4 | \_arm | START | 0 ; 1 | 6 |
 
-## ROS topics
+## **ROS**
+
+### Node
+
+Gamepad
+
+### Topics
 
 | ROS topics subscribed | Message | Description |
 | :---: | :---: | :--- |

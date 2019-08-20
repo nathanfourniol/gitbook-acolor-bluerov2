@@ -12,7 +12,13 @@ description: description of the gui.py and BlueRov2.ui
 
 ### Enable controller
 
-## ROS topic 
+## ROS
+
+### Node
+
+GUI
+
+### Topics
 
 | ROS message subscribed | Message | Description |
 | :---: | :---: | :--- |
