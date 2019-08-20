@@ -8,21 +8,21 @@ The class Commander deals with the publication of pwm to the RC\_channels topics
 
 | ROS topics subscribed | Message | Function |
 | :---: | :---: | :---: |
-| /Command/depth |  | pwm sent by [depth controller](controllers/depth-control.md) |
-| /Command/heading |  | pwm sent by [heading controller](controllers/heading-control.md) |
-| /Command/velocity |  | pwm sent by [velocity controller](controllers/velocity-control.md) |
-| /Command/joy |  | pwm and buttons clicked sent by [gamepad](controllers/gamepad.md) |
-| /Settings/set\_depth |  | enable to send pwm to thrusters |
-| /Settings/set\_heading |  | enable to send pwm to thrusters |
-| /Settings/set\_velocity |  | enable to send pwm to thrusters |
+| /Command/depth | UInt16 | pwm sent by [depth controller](controllers/depth-control.md) |
+| /Command/heading | UInt16 | pwm sent by [heading controller](controllers/heading-control.md) |
+| /Command/velocity | UInt16 | pwm sent by [velocity controller](controllers/velocity-control.md) |
+| /Command/joy | sensor\_msgs/Joy | pwm and buttons clicked sent by [gamepad](controllers/gamepad.md) |
+| /Settings/set\_depth | bluerov\_ros\_playground/Set\_depth | enable to send pwm to thrusters |
+| /Settings/set\_heading | bluerov\_ros\_playground/Set\_heading | enable to send pwm to thrusters |
+| /Settings/set\_velocity | bluerov\_ros\_playground/Set\_velocity | enable to send pwm to thrusters |
 
 | ROS topics published | Message | Function |
 | :---: | :---: | :---: |
-| /BlueRov2/rc\_channel3/set\_pwm |  | Throttle |
-| /BlueRov2/rc\_channel4/set\_pwm |  | Yaw |
-| /BlueRov2/rc\_channel5/set\_pwm |  | Forward |
-| /BlueRov2/rc\_channel6/set\_pwm |  | Lateral |
-| /BlueRov2/rc\_channel8/set\_pwm |  | Camera tilt |
+| /BlueRov2/rc\_channel3/set\_pwm | UInt16 | Throttle |
+| /BlueRov2/rc\_channel4/set\_pwm | UInt16 | Yaw |
+| /BlueRov2/rc\_channel5/set\_pwm | UInt16 | Forward |
+| /BlueRov2/rc\_channel6/set\_pwm | UInt16 | Lateral |
+| /BlueRov2/rc\_channel8/set\_pwm | UInt16 | Camera tilt |
 
 ## RC Input
 
@@ -52,5 +52,5 @@ There are two modes in commander : the MANUAL mode where the gamepad controls th
 
 ## Enable controllers
 
-To enable controllers to control the ROV, you have to send a Set\_\[depth/heading/velocity\] message with the parameter enable\_\[depth/heading/velocity\]\_ctrl to True. Otherwise, the ROV remains uncontroled by the controllers.
+To enable controllers to control the ROV, you have to send a Set\_\[depth/heading/velocity\] message with the parameter enable\_\[depth/heading/velocity\]\_ctrl to True. Otherwise, the ROV remains uncontrolled by the controllers.
 

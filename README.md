@@ -8,7 +8,7 @@ description: >-
 
 ## BlueRov2 
 
-The BlueRov2 is a small ROV made and sold by the company Bluerobotics \([https://bluerobotics.com/store/rov/bluerov2/bluerov2/](https://bluerobotics.com/store/rov/bluerov2/bluerov2/)\). The ROV that we worked on has:
+The BlueRov2 is a small Remotely Operated Vehicle \(ROV\) made and sold by the company Bluerobotics \([https://bluerobotics.com/store/rov/bluerov2/bluerov2/](https://bluerobotics.com/store/rov/bluerov2/bluerov2/)\). The BlueRov2 that we worked on has:
 
 * 6 Thrusters T200 \([https://bluerobotics.com/store/thrusters/t100-t200-thrusters/t200-thruster/](https://bluerobotics.com/store/thrusters/t100-t200-thrusters/t200-thruster/)\)
 * 6 Basic Esc
