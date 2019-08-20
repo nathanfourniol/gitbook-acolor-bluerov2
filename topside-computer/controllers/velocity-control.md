@@ -20,7 +20,7 @@ The class Velocity\_controller implements a PD controller in order to reach the 
 
 | ROS topics published | Message | Function |
 | :---: | :---: | :---: |
-| /Command/depth | Uint16 | Pwm send by the controller to the commander |
+| /Command/velocity | Uint16 | Pwm send by the controller to the commander |
 
 ## Velocity estimation
 
