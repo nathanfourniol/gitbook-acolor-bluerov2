@@ -10,8 +10,6 @@ Not working as controller yet because of difficulties to estimate velocity see [
 
 The class Velocity\_controller implements a PD controller in order to reach the velocity desired.
 
-**ROS node :** velocity\_controller
-
 ## ROS topics
 
 | ROS topics subscribed | Message | Description |
