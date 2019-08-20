@@ -4,7 +4,7 @@ description: description of the file gamepad.py
 
 # Gamepad
 
-The class Gamepad handle event from the Logitech Gamepad F310 connected by USB to topside computer. Build to test ROS implementation before we can connect ROS in parallel of QGroundControl. Because of the compatibility, the only use of gamepad is to switch between MANUAL and AUTOMATIC mode with the X button. 
+The class Gamepad handle event from the Logitech Gamepad F310 connected by USB to topside computer. Build to test ROS implementation before we can connect ROS in parallel of QGroundControl \(QGC\). Because of the compatibility, the only use of gamepad is to switch between MANUAL and AUTOMATIC mode with the X button. 
 
 {% hint style="info" %}
 If you launch QGC at the same time of ROS : Disable gamepad from QGC or not launch the gamepad file.
@@ -29,7 +29,7 @@ pip install inputs
 
 ## How it's working
 
-The inputs library provides API to handle the events from gamepad. Based on the event's name, a dictionary provide a link between the name of the event and the method to call.
+The inputs library provides API to handle the events from gamepad. Based on the event's name, a dictionary provide a link between the name of the event and the method to call. 
 
 ### Assignation table
 
@@ -52,5 +52,23 @@ The inputs library provides API to handle the events from gamepad. Based on the 
 | BTN\_BASE3 | \_disarm | BACK | 0 ; 1 | 4 |
 | BTN\_BASE4 | \_arm | START | 0 ; 1 | 6 |
 
+## ROS topics
 
+| ROS topics subscribed | Message | Function |
+| :--- | :--- | :--- |
+| /BlueRov2/arm | Bool |  The arm status |
+
+| ROS topics published | Message | Description |
+| :--- | :--- | :--- |
+| /Command/joy | sensor\_msgs/Joy | axes : \[THROTTLE, YAW, FORWARD, LATERAL\] |
+|  |  | buttons : \[ARM, OVERRIDE\_CONTROLLER, PWM\_CAM, LIGHT\_DEC, LIGHT\_INC, GAIN\_LIGHT\] |
+
+| Parameters | Type | Description |
+| :--- | :--- | :--- |
+| THROTTLE | UInt16 | pwm |
+| YAW | UInt16 | pwm |
+| FORWARD | UInt16 | pwm |
+| LATERAL | UInt16 | pwm |
+| ARM | Int32 | 0 : disarm ; 1 : arm |
+| OVERRIDE\_CONTROLLER | Int32 | 0 : AUTOMATIC mode, 1 : MANUAL mode |
 
