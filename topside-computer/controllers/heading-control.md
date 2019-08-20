@@ -6,6 +6,8 @@ description: description of the file heading_controller.py
 
 The class Heading\_controller implements a PD controller in order to follow the heading desired.
 
+**ROS node :** heading\_controller
+
 ## ROS topics
 
 | ROS topics subscribed | Message | Description |

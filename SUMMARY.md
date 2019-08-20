@@ -5,8 +5,8 @@
 ## Topside computer
 
 * [Required configuration](topside-computer/prerequisite.md)
+* [ROS architecture and file system](topside-computer/ros-architecture-and-file-system.md)
 * [Launch ROS implementation](topside-computer/launch-ros-implementation.md)
-* [ROS architecture and File System](topside-computer/ros-architecture-and-file-system.md)
 * [ROS-MAVlink bridge](topside-computer/ros-mavlink-bridge.md)
 * [Controllers](topside-computer/controllers/README.md)
   * [Depth control](topside-computer/controllers/depth-control.md)

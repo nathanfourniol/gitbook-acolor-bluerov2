@@ -10,6 +10,8 @@ Not working as controller yet because of difficulties to estimate velocity see [
 
 The class Velocity\_controller implements a PD controller in order to reach the velocity desired.
 
+**ROS node :** velocity\_controller
+
 ## ROS topics
 
 | ROS topics subscribed | Message | Description |
@@ -24,7 +26,7 @@ The class Velocity\_controller implements a PD controller in order to reach the 
 
 ## Velocity estimation
 
-To estimate current velocity only from acceleration, it is needed to integrate acceleration values once. Even with the filters in the Imu data publisher, a drift cannot be removed leading to a false velocity estimation. Indeed this script cannot be use yet as a velocity controller.
+To estimate current velocity only from acceleration, it is needed to integrate acceleration values once. However, raw imu data are noisy and even after the use of filters in the Imu data publisher, errors remain. A drift is then observed over time on the velocity estimation, this estimation is then not usable. This script cannot be use as a velocity controller yet.
 
 {% hint style="warning" %}
 Yet if you enable the controller in AUTOMATIC mode, it will send a constant pwm equals to pwm\_max - 50 where pwm\_max is defined in Set\_velocity message published on the topic /Settings/set\_velocity
@@ -36,7 +38,7 @@ The PID controller use the difference between depth calculated and depth desired
 
 ## Saturation
 
-A saturation method is added on pwm output before the publication on the command topic in case of a will to limit thruster power.
+A saturation method is added on pwm output before the publication on the command topic in order to limit thruster power.
 
 ## Send velocity target
 
