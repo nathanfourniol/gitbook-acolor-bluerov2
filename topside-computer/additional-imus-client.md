@@ -1,7 +1,7 @@
 ---
 description: >-
   There are two additional IMUs inside the BlueRov2 to try to get a good
-  estimation of the velocity
+  estimation of the velocity. Description of the
 ---
 
 # Additional IMUs client
@@ -12,16 +12,18 @@ IMU stands for Inertial measurement unit, they are pretty common sensors for rob
 
 The BlueROV2 has 2 kinds of IMU:
 
-* 1 PIXhawk IMU for heading estimation
-* 2 adafruit IMUS \(put full name\) for velocity estimation
+* 1 PixHawk IMU for heading estimation
+* 2 Adafruit LSM9DS1
 
-The IMUs used have 9 DOF: 3 angular velocity, 3 linear acceleration, 3 magnetometer.
+   IMUs  for velocity estimation
 
-With those data it is possible to compute an orientation quaternion,  later used to calculate euler angles.
+The IMUs used have 9 DOF: 3 angular velocities, 3 linear accelerations, 1 magnetometer.
+
+With those data it is possible to compute an orientation quaternion,  later used to calculate Euler angles.
 
 ## Why 2 IMUs ?
 
-We used 2 IMU in order to take the mean value, and therefore gain in accuracy.
+We used 2 IMUs in order to take the mean value, and therefore gain in accuracy.
 
 \(ajouter lien research on imus + graphe influence nombre et résultat\) 
 
@@ -29,7 +31,7 @@ We used 2 IMU in order to take the mean value, and therefore gain in accuracy.
 
 [https://upcommons.upc.edu/bitstream/handle/2117/103849/MScLeslieB.pdf?sequence=1&isAllowed=y](https://upcommons.upc.edu/bitstream/handle/2117/103849/MScLeslieB.pdf?sequence=1&isAllowed=y)
 
-Data from relatively cheap IMU sensors are very noisy. The predominant error and noise sources are: 
+Data from relatively cheap IMU are very noisy. The predominant error and noise sources are: 
 
 * constant bias error: average output of the device over a specified time, there are 2 parts one deterministic part called bias offset and a random part. The bias offset can be determined by calibration. The random part is a stochastic process and refers to the rate at which the error in an inertial sensor accumulates with time.
 * bias instability: random variation in the bias computed over a finite sample of time
@@ -40,9 +42,19 @@ To improve the quality of raw data we implemented an exponential filter \(low-pa
 
 A solution to solve the issue would be to fuse IMU acceleration data with an other measurement of velocity from an other sensor \(DVL, GPS...\) in a Kalman filter. The IMU give a good short time estimation that needs to be corrected after a while with low frequency sensors, as GPS.
 
+## About the code
+
+### Receiving data
+
+The code operate as client which subscribed to a [server](../companion-computer/additional-imus-server.md) running on Raspberry Pi. There is no data processing on the Raspberry Pi. The client requests data by sending "?" to the server and the server answer by sending IMUs data. They communicate at 100 Hz.  
+
+### Data format
 
 
 
+### Data Processing
+
+## 
 
 
 
