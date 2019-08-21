@@ -6,3 +6,5 @@
 
 ## ROS architecture
 
+![](../.gitbook/assets/rosgraph.png)
+
