@@ -50,7 +50,7 @@ The code operate as client which subscribed to a [server](../companion-computer/
 
 ### Data format
 
-
+Data sent by server is a  
 
 ### Data Processing
 
