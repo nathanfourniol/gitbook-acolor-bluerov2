@@ -91,15 +91,9 @@ The velocity is not recorded as velocity but only acceleration are recorded with
 
 It's an overview of the controllers with a preview of the controllers output in the column PWM\_sent. The checkbox can be check to enable the controller to drive the ROV if the AUTOMATIC mode otherwise it will not work until the AUTOMATIC mode is on.
 
-Units are meters for altitude \(eg : 0.174m=0.174m above the surface\), degrees for heading in range 0-360, velocity is not estimated yet so is always written -1. See here [velocity control](controllers/velocity-control.md).
+Units are meters for altitude \(eg : 0.174m=0.174m above the surface, -2m is 2m under surface\), degrees for heading in range 0-360, velocity is not estimated yet so is always written -1. See here [velocity control](controllers/velocity-control.md).
 {% endtab %}
 {% endtabs %}
-
-## Features
-
-### Record data
-
-### Enable controller
 
 ## ROS
 
@@ -111,23 +105,23 @@ GUI
 
 | ROS message subscribed | Message | Description |
 | :---: | :---: | :--- |
-| /BlueRov2/State | bluerov\_ros\_playground/State |  |
-| /BlueRov2/battery | sensor\_msgs/BatteryState |  |
-| /BlueRov2/bar30 | bluerov\_ros\_playground/Bar30 |  |
-| /BlueRov2/imu/attitude | bluerov\_ros\_playground/Attitude |  |
-| /Command/depth | UInt16 |  |
-| /Command/heading | UInt16 |  |
-| /Command/velocity | UInt16 |  |
-| /Command/velocity | UInt16 |  |
-| /Settings/set\_depth | bluerov\_ros\_playground/Set\_depth |  |
-| /Settings/set\_heading | bluerov\_ros\_playground/Set\_heading |  |
-| /Settings/set\_velocity | bluerov\_ros\_playground/Set\_velocity |  |
-| /Settings/set\_target | bluerov\_ros\_playground/Set\_target |  |
+| /BlueRov2/State | bluerov\_ros\_playground/State |  State of the ROV : arm status, thrusters pwm, light level, camera tilt  |
+| /BlueRov2/battery | sensor\_msgs/BatteryState | Battery state |
+| /BlueRov2/bar30 | bluerov\_ros\_playground/Bar30 | Absolute pressure |
+| /BlueRov2/imu/attitude | bluerov\_ros\_playground/Attitude | Contain yaw data |
+| /Command/depth | UInt16 | pwm sent by depth controller for the pwm preview |
+| /Command/heading | UInt16 | pwm sent by heading controller for the pwm preview |
+| /Command/velocity | UInt16 | pwm sent by velocity controller for the pwm preview |
+| /Command/Joy | UInt16 | To switch the mode display \(the real switch is in [commander.py](commander.md)\) |
+| /Settings/set\_depth | bluerov\_ros\_playground/Set\_depth | To  read depth controller settings |
+| /Settings/set\_heading | bluerov\_ros\_playground/Set\_heading | To read heading controller settings |
+| /Settings/set\_velocity | bluerov\_ros\_playground/Set\_velocity | To read velocity controller settings |
+| /Settings/set\_target | bluerov\_ros\_playground/Set\_target | To read target to reach |
 
 | ROS message published | Message | Description |
 | :---: | :---: | :--- |
-| /Settings/set\_depth | bluerov\_ros\_playground/Set\_depth |  |
-| /Settings/set\_heading | bluerov\_ros\_playground/Set\_heading |  |
-| /Settings/set\_velocity | bluerov\_ros\_playground/Set\_velocity |  |
-| /Settings/set\_target | bluerov\_ros\_playground/Set\_target |  |
+| /Settings/set\_depth | bluerov\_ros\_playground/Set\_depth | send depth controller settings |
+| /Settings/set\_heading | bluerov\_ros\_playground/Set\_heading | send heading controller settings |
+| /Settings/set\_velocity | bluerov\_ros\_playground/Set\_velocity | send velocity controller settings |
+| /Settings/set\_target | bluerov\_ros\_playground/Set\_target | send target to reach in depth, heading and velocity |
 

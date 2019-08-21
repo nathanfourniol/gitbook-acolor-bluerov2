@@ -13,7 +13,7 @@ IMU stands for Inertial measurement unit, they are pretty common sensors for rob
 The BlueROV2 has 2 kinds of IMU:
 
 * 1 PIXhawk IMU for heading estimation
-* 2 adafruit imu \(put full name\) for velocity estimation
+* 2 adafruit IMUS \(put full name\) for velocity estimation
 
 The IMUs used have 9 DOF: 3 angular velocity, 3 linear acceleration, 3 magnetometer.
 
