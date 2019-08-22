@@ -2,7 +2,7 @@
 
 There is a lot of examples for BlueRov2 [https://www.ardusub.com/developers/pymavlink.html](https://www.ardusub.com/developers/pymavlink.html) 
 
-There is two end points for mavlink stream. The 'udpin:192.168.2.1:14550'
+There is two end points for mavlink stream. :
 
 |  |  |
 | :--- | :--- |
