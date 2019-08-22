@@ -4,7 +4,7 @@ description: description of the file gamepad.py
 
 # Gamepad
 
-The class Gamepad handle event from the Logitech Gamepad F310 connected by USB to topside computer. Build to test ROS implementation before we can connect ROS in parallel of QGroundControl \(QGC\). Because of the compatibility, the only use of gamepad is to switch between MANUAL and AUTOMATIC mode with the X button. 
+The class Gamepad handle event from the Logitech Gamepad F310 connected by USB to topside computer. Build to test ROS implementation before we can connect ROS in parallel of QGroundControl \(QGC\). 
 
 {% hint style="info" %}
 If you launch QGC at the same time of ROS : Disable gamepad from QGC or not launch the gamepad file.

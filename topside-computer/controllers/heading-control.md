@@ -30,9 +30,9 @@ The heading targeted must be in \[0, 360\]deg range where 0 is North, 180 is Sou
 
 ## Heading estimation
 
-## PID controller
+## PD controller
 
-The PID controller use the difference between current yaw and the yaw desired, but also the derivative value to compute a command in the interval \[-400,+400\]. This command is add to 1500, the pwm neutral of thrusters.
+The PD controller use the difference between current yaw and the yaw desired, but also the derivative value to compute a command in the interval \[-400,+400\]. This command is add to 1500, the pwm neutral of thrusters.
 
 {% hint style="warning" %}
 To calculate the command the current yaw and the yaw desired are in \[-pi,pi\]rad range
@@ -64,9 +64,9 @@ Several methods exist to publish the message : the GUI, command line, script, ..
 The heading targeted must be in \[0, 360\]deg range where 0 is North, 180 is South
 {% endhint %}
 
-## Tune PID and set saturation
+## Tune PD and set saturation
 
-PID coefficients and maximum pwm for saturation of the command can be modified in real time by the Set\_heading message published on the topic /Settings/set\_heading.
+PD coefficients and maximum pwm for saturation of the command can be modified in real time by the Set\_heading message published on the topic /Settings/set\_heading.
 
 {% hint style="danger" %}
 These values send are not saved and the controller will get its initial value. To change permanently the values of those parameters you must change it in the code, in the \_\_init\_\_ method.

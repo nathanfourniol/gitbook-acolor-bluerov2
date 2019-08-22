@@ -51,7 +51,7 @@ Commander
 {% hint style="info" %}
 From [https://www.ardusub.com/operators-manual/rc-input-and-output.html](https://www.ardusub.com/operators-manual/rc-input-and-output.html).
 
-According to MAVlink, only 8 first channels can be overridden, to reach the other channels, it's needed to send MAVlink command with manual\_command\_sent 
+According to MAVlink and ArduSub, only the eight first channels can be overridden. To reach the other channels, the only way is to send MAVlink command with manual\_command\_sent 
 {% endhint %}
 
 ## Modes
@@ -60,5 +60,7 @@ There are two modes in commander : the MANUAL mode where the gamepad controls th
 
 ## Enable controllers
 
-To enable controllers to control the ROV, you have to send a Set\_\[depth/heading/velocity\] message with the parameter enable\_\[depth/heading/velocity\]\_ctrl to True. Otherwise, the ROV remains uncontrolled by the controllers.
+First you need to enable AUTOMATIC mode.
+
+Then to enable controllers to control the ROV, you have to send a Set\_\[depth/heading/velocity\] message with the parameter enable\_\[depth/heading/velocity\]\_ctrl to True. Otherwise, the ROV remains uncontrolled by \[depth/heading/velocity\] controllers.
 

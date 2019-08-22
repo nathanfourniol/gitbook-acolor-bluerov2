@@ -32,5 +32,5 @@
 
 ## Configure new frame
 
-* [Untitled](configure-new-frame/untitled.md)
+* [Custom Ardusub 3.5](configure-new-frame/untitled.md)
 

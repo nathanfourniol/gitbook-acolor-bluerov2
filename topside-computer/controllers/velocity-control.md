@@ -36,9 +36,9 @@ To estimate current velocity only from acceleration, it is needed to integrate a
 Yet if you enable the controller in AUTOMATIC mode, it will send a constant pwm equals to pwm\_max - 50 where pwm\_max is defined in Set\_velocity message published on the topic /Settings/set\_velocity
 {% endhint %}
 
-## PID controller
+## PD controller
 
-The PID controller use the difference between depth calculated and depth desired, but also the derivative and the integrate value to compute a command in the interval \[-400,+400\]. This command is add to 1500, the pwm neutral of thrusters.
+The PD controller use the difference between depth calculated and depth desired, but also the derivative and the integrate value to compute a command in the interval \[-400,+400\]. This command is add to 1500, the pwm neutral of thrusters.
 
 ## Saturation
 
@@ -62,9 +62,9 @@ Several methods exist to publish the message : the GUI, command line, script, ..
 | float64 | heading\_desired | deg |
 | float64 | velocity\_desired | m/s |
 
-## Tune PID and set saturation
+## Tune PD and set saturation
 
-PID coefficients and maximum pwm for saturation of the command can be modified in real time by the Set\_velocity message published on the topic /Settings/set\_velocity.
+PD coefficients and maximum pwm for saturation of the command can be modified in real time by the Set\_velocity message published on the topic /Settings/set\_velocity.
 
 {% hint style="danger" %}
 These values send are not saved and the controller will get its initial value. To change permanently the values of those parameters you must change it in the code, in the \_\_init\_\_ method.
