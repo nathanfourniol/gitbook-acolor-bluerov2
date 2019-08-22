@@ -4,7 +4,7 @@ description: >-
   estimation of the velocity. Description of the
 ---
 
-# Additional IMUs client
+# Additional IMUs : client
 
 ## About IMUs
 
@@ -85,7 +85,7 @@ Data are processed and then published on the topic /imu/data\_raw. The axis orie
 
 First data are organized to fit the PixHawk IMU configuration. Then they are calibrated according to the calibration file. Finally they are filtered by a IIR low pass filter.
 
-### Calibration file 
+#### Calibration file 
 
 Calibreration files are in the
 
@@ -123,13 +123,21 @@ $$
 }
 ```
 
-In the exemple of a calibrated file, _acc_ is for acceleration values, _gyr_ for gyroscope values, and _magn_ for magnetic value, _off_  means offset and _scale_ is for scale
+In the example of a calibrated file, _acc_ is for acceleration values, _gyr_ for gyroscope values, and _magn_ for magnetic value, _off_  means offset and _scale_ is for scale.
 
 {% hint style="info" %}
 To calibrate the magnetometer we used a modified version of FreeIMU GUI calibration tool : [https://github.com/nathanfourniol/FreeIMU-gui-ROS](https://github.com/nathanfourniol/FreeIMU-gui-ROS)
 
-For accelerometer and gyroscope we recorded data when the ROV was motionless. We averraged for each axis. The average value is our offset. and the scale is 1.
+For accelerometer and gyroscope we recorded data when the ROV was motionless. We averaged for each axis. The average value is our offset. and the scale is 1.
 {% endhint %}
+
+#### IIR filter
+
+$$
+y[n] = a*x[n] + (1-a)*y[n-1]
+$$
+
+Where y is the output and x the measured vector, a is the smoothing value. In our case a = 0.3.
 
 ## 
 
