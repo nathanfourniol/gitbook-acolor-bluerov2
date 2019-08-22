@@ -48,11 +48,88 @@ A solution to solve the issue would be to fuse IMU acceleration data with an oth
 
 The code operate as client which subscribed to a [server](../companion-computer/additional-imus-server.md) running on Raspberry Pi. There is no data processing on the Raspberry Pi. The client requests data by sending "?" to the server and the server answer by sending IMUs data. They communicate at 100 Hz.  
 
-### Data format
+### Data received format
 
-Data sent by server is a  
+Data sent by server are a dictionary  and the axes are those defined by the physical sensor on the robot 
+
+{IMU1:{"time": t,   
+"accel\_x": accel\_x,   
+"accel\_y": accel\_y,   
+"accel\_z": accel\_z,   
+"mag\_x": mag\_x,   
+"mag\_y": mag\_y,   
+"mag\_z": mag\_z,   
+"gyro\_x": gyro\_x,   
+"gyro\_y": gyro\_y,   
+"gyro\_z": gyro\_z,   
+"temperature": temp},  
+IMU2:{"time": t,   
+"accel\_x": accel\_x,   
+"accel\_y": accel\_y,   
+"accel\_z": accel\_z,   
+"mag\_x": mag\_x,   
+"mag\_y": mag\_y,   
+"mag\_z": mag\_z,   
+"gyro\_x": gyro\_x,   
+"gyro\_y": gyro\_y,   
+"gyro\_z": gyro\_z,   
+"temperature": temp}}
+
+### Data published on the topic /imu/data\_raw 
+
+Data are processed and then published on the topic /imu/data\_raw. The axis orientation is the same as PixHawk in the BlueRov2 configuration.
+
+![PixHawk axis configuration](../.gitbook/assets/rovorientaion.png)
 
 ### Data Processing
+
+First data are organized to fit the PixHawk IMU configuration. Then they are calibrated according to the calibration file. Finally they are filtered by a IIR low pass filter.
+
+### Calibration file 
+
+Calibreration files are in the
+
+There are two calibration files, one for each adafruit IMU. For each parameter, the result after calibration is :
+
+$$
+Calibrated Value = (Measured Value - offset)/scale
+$$
+
+```text
+{
+"acc_unit" : "m.s^-2", 
+"acc_off_x" : 0.363, 
+"acc_off_y" : 0.016,
+"acc_off_z" : -0.070,
+"acc_scale_x" : 1,
+"acc_scale_y" : 1,
+"acc_scale_z" : 1,
+
+"gyr_unit": "degrees per second",
+"gyr_off_x" : -4.64 , 
+"gyr_off_y" : 3.39,
+"gyr_off_z" : 0.772,
+"gyr_scale_x" : 1,
+"gyr_scale_y" : 1,  
+"gyr_scale_z" : 1,
+
+"magn_unit": "",
+"magn_off_x" : -672,
+"magn_off_y" : -241,
+"magn_off_z" : -514,
+"magn_scale_x" : 376.433798,
+"magn_scale_y" : 409.322561,
+"magn_scale_z" : 475.686674 
+}
+```
+
+In the exemple of a calibrated file, _acc_ is for acceleration values, _gyr_ for gyroscope values, and _magn_ for magnetic value, _off_  means offset and _scale_ is for scale
+
+{% hint style="info" %}
+To calibrate the magnetometer we used a modified version of FreeIMU GUI calibration tool : [https://github.com/nathanfourniol/FreeIMU-gui-ROS](https://github.com/nathanfourniol/FreeIMU-gui-ROS)
+
+For accelerometer and gyroscope we recorded data when the ROV was motionless. We averraged for each axis. The average value is our offset. and the scale is 1.
+{% endhint %}
 
 ## 
 
