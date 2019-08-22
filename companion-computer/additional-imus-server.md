@@ -23,6 +23,8 @@ To connect the two IMUs on the same I2C bus, one of them must have its SDOM and 
 This is already setup in the _aColor-BlueRov2-raspberry-with-server-for-imu-4Gb.img_ 
 {% endhint %}
 
+This require Python3 and pip.
+
 ```text
 sudo apt-get update
 sudo apt-get upgrade
