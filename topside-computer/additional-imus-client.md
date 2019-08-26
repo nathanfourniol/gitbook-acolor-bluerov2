@@ -43,7 +43,11 @@ To improve the quality of raw data we implemented an exponential filter \(low-pa
 
 A solution to solve the issue would be to fuse IMU acceleration data with an other measurement of velocity from an other sensor \(DVL, GPS...\) in a Kalman filter. The IMU give a good short time estimation that needs to be corrected after a while with low frequency sensors, as GPS.
 
-## About the code
+## Imu\_bridge.py
+
+{% hint style="info" %}
+Imu\_bridge\_raw.py runs like Imu\_bridge.py but doesn't do calibration. Only raw data are published on /BlueRov2/imu/imu1\_raw,  /BlueRov2/imu/mag1\_raw for IMU1, /BlueRov2/imu/imu2\_raw, /BlueRov2/imu/mag2\_raw for IMU2.
+{% endhint %}
 
 ### Receiving data
 
@@ -52,6 +56,10 @@ The code operate as client which subscribed to a [server](../companion-computer/
 ### Data received format
 
 Data sent by server are a dictionary  and the axes are those defined by the physical sensor on the robot 
+
+{% hint style="info" %}
+In our case IMU1 is the first IMU, IMU2 is the second with SDOM and SDAG connected to the ground
+{% endhint %}
 
 {IMU1:{"time": t,   
 "accel\_x": accel\_x,   
@@ -80,7 +88,7 @@ IMU2:{"time": t,
 
 Data are processed and then published on the topic /imu/data\_raw. The axis orientation is the same as PixHawk in the BlueRov2 configuration.
 
-![PixHawk axis configuration](../.gitbook/assets/rovorientaion.png)
+![PixHawk and IMUs axis configuration](../.gitbook/assets/rovorientaion.png)
 
 ### Data Processing
 

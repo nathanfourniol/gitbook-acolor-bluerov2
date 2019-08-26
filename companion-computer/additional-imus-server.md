@@ -1,6 +1,10 @@
+---
+description: Description of the file server.py from Raspberry Py
+---
+
 # Additional IMUs : server
 
-The two additional IMUs are connected to Rasberry Pi in I2C. If you have flashed the SD card with the image : _aColor-BlueRov2-raspberry-with-server-for-imu-4Gb.img t_he only thing do do is connecting the two IMUs to the Raspberry
+The two additional IMUs are connected to Rasberry Pi in I2C. If you have flashed the SD card with the image : _aColor-BlueRov2-raspberry-with-server-for-imu-4Gb.img_ the only thing do do is connecting the two IMUs to the Raspberry
 
 ### Connect IMUs on the Raspberry :
 
@@ -14,7 +18,7 @@ The two additional IMUs are connected to Rasberry Pi in I2C. If you have flashed
 | GND | SDOAG \(only for the second IMU\) |
 
 {% hint style="info" %}
-To connect the two IMUs on the same I2C bus, one of them must have its SDOM and SDOAG pin connected to the ground
+To connect the two adafruit LSM9D1 IMUs on the same I2C bus, one of them must have its SDOM and SDOAG pin connected to the ground
 {% endhint %}
 
 ### Libraries
