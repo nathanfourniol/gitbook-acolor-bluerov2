@@ -14,7 +14,8 @@
   * [Velocity control](topside-computer/controllers/velocity-control.md)
   * [Gamepad](topside-computer/controllers/gamepad.md)
 * [Commander](topside-computer/commander.md)
-* [Graphical User Interface \(GUI\)](topside-computer/untitled.md)
+* [Graphical User Interface \(GUI\)](topside-computer/graphical-user-interface/README.md)
+  * [GUI modification](topside-computer/graphical-user-interface/gui-modification.md)
 * [Additional IMUs : client](topside-computer/additional-imus-client.md)
 
 ## Companion computer
@@ -24,7 +25,7 @@
 
 ## ArduSub
 
-* [ArduSub](ardusub/untitled.md)
+* [ArduSub parameters](ardusub/untitled.md)
 
 ## MAVlink message
 

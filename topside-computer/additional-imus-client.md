@@ -94,15 +94,17 @@ Data are processed and then published on the topic /imu/data\_raw. The axis orie
 
 First data are organized to fit the PixHawk IMU configuration. Then they are calibrated according to the calibration file. Finally they are filtered by a IIR low pass filter.
 
-#### Calibration file 
+#### Calibration process
 
-Calibreration files are in the
+Calibration files are in the folder imu\_i2c/calibration \([File structure](ros-architecture-and-file-system.md#ros-package-structure)\)
 
 There are two calibration files, one for each adafruit IMU. For each parameter, the result after calibration is :
 
 $$
 Calibrated Value = (Measured Value - offset)/scale
 $$
+
+#### Calibration file
 
 ```text
 {
@@ -122,17 +124,17 @@ $$
 "gyr_scale_y" : 1,  
 "gyr_scale_z" : 1,
 
-"magn_unit": "",
-"magn_off_x" : -672,
-"magn_off_y" : -241,
-"magn_off_z" : -514,
-"magn_scale_x" : 376.433798,
-"magn_scale_y" : 409.322561,
-"magn_scale_z" : 475.686674 
+magn_unit: "gauss",
+magn_off_x : -0.672,
+magn_off_y : -0.241,
+magn_off_z : -0.514,
+magn_scale_x : 0.376,
+magn_scale_y : 0.409,
+magn_scale_z : 0.475
 }
 ```
 
-In the example of a calibrated file, _acc_ is for acceleration values, _gyr_ for gyroscope values, and _magn_ for magnetic value, _off_  means offset and _scale_ is for scale.
+In the example of a calibration file, _acc_ is for acceleration values, _gyr_ for gyroscope values, and _magn_ for magnetic value, _off_  means offset and _scale_ is for scale.
 
 {% hint style="info" %}
 To calibrate the magnetometer we used a modified version of FreeIMU GUI calibration tool : [https://github.com/nathanfourniol/FreeIMU-gui-ROS](https://github.com/nathanfourniol/FreeIMU-gui-ROS)

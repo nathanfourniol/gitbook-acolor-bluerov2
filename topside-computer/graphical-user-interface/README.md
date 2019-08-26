@@ -6,13 +6,13 @@ description: description of the gui.py and BlueRov2.ui
 
 ## Graphical aspect
 
-![](../.gitbook/assets/guiinaction.png)
+![](../../.gitbook/assets/guiinaction.png)
 
 ### Description of the GUI
 
 {% tabs %}
 {% tab title="STATUS" %}
-![](../.gitbook/assets/guiinactionstatus.png)
+![](../../.gitbook/assets/guiinactionstatus.png)
 
 | Components | Description |
 | ---: | :--- |
@@ -25,7 +25,7 @@ description: description of the gui.py and BlueRov2.ui
 {% endtab %}
 
 {% tab title="SET PARAMETERS" %}
-![](../.gitbook/assets/guiinactionset_params.png)
+![](../../.gitbook/assets/guiinactionset_params.png)
 
 <table>
   <thead>
@@ -67,7 +67,7 @@ description: description of the gui.py and BlueRov2.ui
 {% endtab %}
 
 {% tab title="RECORD DATA" %}
-![](../.gitbook/assets/guiinactionrecord_data.png)
+![](../../.gitbook/assets/guiinactionrecord_data.png)
 
 This area allows to record data by launching a rosbag record command described below. You can change the record time, in s, up to 3600s. The record time from Start All button is the maximum of the three record time parameters.
 
@@ -87,11 +87,11 @@ The velocity is not recorded as velocity but only acceleration are recorded with
 {% endtab %}
 
 {% tab title="CONTROLLER OVERVIEW" %}
-![](../.gitbook/assets/guiinactionctrl_overview.png)
+![](../../.gitbook/assets/guiinactionctrl_overview.png)
 
 It's an overview of the controllers with a preview of the controllers output in the column PWM\_sent. The checkbox can be check to enable the controller to drive the ROV if the AUTOMATIC mode otherwise it will not work until the AUTOMATIC mode is on.
 
-Units are meters for altitude \(eg : 0.174m=0.174m above the surface, -2m is 2m under surface\), degrees for heading in range 0-360, velocity is not estimated yet so is always written -1. See here [velocity control](controllers/velocity-control.md).
+Units are meters for altitude \(eg : 0.174m=0.174m above the surface, -2m is 2m under surface\), degrees for heading in range 0-360, velocity is not estimated yet so is always written -1. See here [velocity control](../controllers/velocity-control.md).
 {% endtab %}
 {% endtabs %}
 
@@ -112,7 +112,7 @@ GUI
 | /Command/depth | UInt16 | pwm sent by depth controller for the pwm preview |
 | /Command/heading | UInt16 | pwm sent by heading controller for the pwm preview |
 | /Command/velocity | UInt16 | pwm sent by velocity controller for the pwm preview |
-| /Command/Joy | UInt16 | To switch the mode display \(the real switch is in [commander.py](commander.md)\) |
+| /Command/Joy | UInt16 | To switch the mode display \(the real switch is in [commander.py](../commander.md)\) |
 | /Settings/set\_depth | bluerov\_ros\_playground/Set\_depth | To  read depth controller settings |
 | /Settings/set\_heading | bluerov\_ros\_playground/Set\_heading | To read heading controller settings |
 | /Settings/set\_velocity | bluerov\_ros\_playground/Set\_velocity | To read velocity controller settings |

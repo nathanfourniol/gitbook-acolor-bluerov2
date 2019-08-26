@@ -1,10 +1,10 @@
 # File system and ROS architecture
 
-## File system
+## ROS package structure
 
-![](../.gitbook/assets/rospckgfilesystem.png)
+![Image 2 : ROS package structure](../.gitbook/assets/rospckgfilesystem.png)
 
-## ROS architecture
+## ROS nodes and topics architecture
 
-![](../.gitbook/assets/rosgraph.png)
+![Image 3 : ROS nodes and topics architecture](../.gitbook/assets/rosgraph.png)
 

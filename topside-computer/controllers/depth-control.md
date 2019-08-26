@@ -30,7 +30,7 @@ In this script, the axis Z for the depth goes up. To reach 1m depth the input mu
 
 ## Depth estimation
 
-To estimate current depth the controller get the absolute pressure from the Bar30 sensor and compute it with hydrostatic equation.
+To estimate current depth the controller gets the absolute pressure from the Bar30 sensor and computes it with hydrostatic equation.
 
 $$
 depth = -(p - p0) / (ρ * g)
@@ -46,7 +46,7 @@ $$
 
 ## PID controller
 
-The PID controller use the difference between depth calculated and depth desired, but also the derivative and the integrate values to compute a command in the interval \[-400,+400\]. This command is add to 1500, the pwm neutral of thrusters.
+The PID controller uses the difference between depth calculated and depth desired, but also the derivative and the integrate values to compute a command in the interval \[-400,+400\]. This command is added to 1500, the pwm neutral of thrusters.
 
 ## Saturation
 

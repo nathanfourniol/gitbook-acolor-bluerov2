@@ -12,7 +12,7 @@ If you launch QGC at the same time of ROS : Disable gamepad from QGC or not laun
 
 ## Library
 
-The class Gamepad use the library input from https://github.com/zeth/inputs to handle gamepad joystick and buttons.
+The class Gamepad uses the library input from [https://github.com/zeth/inputs](https://github.com/zeth/inputs) to handle gamepad joystick and buttons.
 
 This library comes with the github ROS repository but you will need to build it by 
 
@@ -82,7 +82,7 @@ Gamepad
       </td>
     </tr>
   </tbody>
-</table>| Parameters | Type | Description |
+</table>| Joy message parameters | Type | Description |
 | :--- | :--- | :--- |
 | THROTTLE | Float32 | pwm : Uint16  \[1100-1900\]range |
 | YAW | Float32 | pwm : Uint16  \[1100-1900\]range |

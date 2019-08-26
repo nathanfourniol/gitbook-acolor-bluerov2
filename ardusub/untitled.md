@@ -1,4 +1,4 @@
-# ArduSub
+# ArduSub parameters
 
 Currently the Ardusub version running on Pixhawk 1 \(PX4-v2 platform\)  is 3.5.  
 For communication, it uses MAVlink protocol version 1. 

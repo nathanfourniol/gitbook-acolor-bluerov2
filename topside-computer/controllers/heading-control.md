@@ -16,7 +16,7 @@ heading\_controller
 
 | ROS topics subscribed | Message | Description |
 | :---: | :---: | :--- |
-| /BlueRov2/imu/attitude | bluerov\_ros\_playground/Attitude | Yaw in \[-pi,pi\]rad |
+| /BlueRov2/imu/attitude | bluerov\_ros\_playground/Attitude | Yaw in \[-π,π\]rad |
 | /Settings/set\_heading | bluerov\_ros\_playground/Set\_heading | Settings for the controller |
 | /Settings/set\_target | bluerov\_ros\_playground/Set\_target | Yaw to follow |
 
@@ -32,7 +32,7 @@ The heading targeted must be in \[0, 360\]deg range where 0 is North, 180 is Sou
 
 ## PD controller
 
-The PD controller use the difference between current yaw and the yaw desired, but also the derivative value to compute a command in the interval \[-400,+400\]. This command is add to 1500, the pwm neutral of thrusters.
+The PD controller uses the difference between current yaw and the yaw desired, but also the derivative value to compute a command in the interval \[-400,+400\]. This command is added to 1500, the pwm neutral of thrusters.
 
 {% hint style="warning" %}
 To calculate the command the current yaw and the yaw desired are in \[-pi,pi\]rad range
@@ -61,7 +61,7 @@ Several methods exist to publish the message : the GUI, command line, script, ..
 | float64 | velocity\_desired | m/s |
 
 {% hint style="info" %}
-The heading targeted must be in \[0, 360\]deg range where 0 is North, 180 is South
+The heading targeted must be in \[0, 360\]deg range where 0 and 360 is North, 180 is South
 {% endhint %}
 
 ## Tune PD and set saturation
