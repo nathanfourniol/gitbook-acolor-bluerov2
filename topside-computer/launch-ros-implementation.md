@@ -19,8 +19,7 @@ QGroundControl \(GQC\) use the 192.168.2.1:14550 endpoint. So you can run QGC an
 To connect topside computer to a server running on companion commputer
 
 ```text
-cd src/imu_i2c
-python Imu_bridge.py
+rosrun bluerov_ros_playground Imu_bridge.py
 ```
 
 ## Launch controllers and GUI
