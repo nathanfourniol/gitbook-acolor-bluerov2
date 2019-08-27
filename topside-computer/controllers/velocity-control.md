@@ -5,10 +5,10 @@ description: description of velocity_controller.py
 # Velocity control
 
 {% hint style="danger" %}
-Not working as controller because of difficulties to estimate velocity see [here](velocity-control.md#velocity-estimation)
+Not working as controller because of difficulties to estimate velocity see [here](velocity-control.md#velocity-estimation). The controller publishes only a constant pwm from the velocity target between \[-400,400\] plus 1500 to be in \[-1100,1900\] for thrusters.
 {% endhint %}
 
-The class Velocity\_controller implements a PD controller in order to reach the velocity desired.
+The class Velocity\_controller had the aim to implement a PD controller in order to reach the velocity desired but the aim was not reach.
 
 ## **ROS**
 
@@ -49,7 +49,7 @@ A saturation method is added on pwm output before the publication on the command
 The velocity target is defined by the publication of a Set\_target message on the topic /Settings/set\_target. This message is shared with the depth and the heading controller to set their target.
 
 {% hint style="danger" %}
-This not work for velocity target see [here](velocity-control.md#velocity-estimation)
+The velocity target in a pwm between \[-400,400\] that will be added to 1500. There is no PD controller on velocity. The pwm sends is a constant pwm.
 {% endhint %}
 
 {% hint style="info" %}
@@ -60,7 +60,7 @@ Several methods exist to publish the message : the GUI, command line, script, ..
 | ---: | :--- | :--- |
 | float64 | depth\_desired | m |
 | float64 | heading\_desired | deg |
-| float64 | velocity\_desired | m/s |
+| float64 | velocity\_desired | pwm range \[-400,400\] |
 
 ## Tune PD and set saturation
 

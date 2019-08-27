@@ -64,7 +64,7 @@ Several methods exist to publish the message : the GUI, command line, script, ..
 | ---: | :--- | :--- |
 | float64 | depth\_desired | m |
 | float64 | heading\_desired | deg |
-| float64 | velocity\_desired | m/s |
+| float64 | velocity\_desired | pwm range\[-400,400\] |
 
 {% hint style="warning" %}
 In this script, the axis Z for the depth goes up. To reach 1m depth the input must be -1

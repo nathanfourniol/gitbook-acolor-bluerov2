@@ -58,7 +58,7 @@ Several methods exist to publish the message : the GUI, command line, script, ..
 | ---: | :--- | :--- |
 | float64 | depth\_desired | m |
 | float64 | heading\_desired | deg |
-| float64 | velocity\_desired | m/s |
+| float64 | velocity\_desired | pwm range \[-400,400\]  |
 
 {% hint style="info" %}
 The heading targeted must be in \[0, 360\]deg range where 0 and 360 is North, 180 is South
