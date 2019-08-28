@@ -24,9 +24,7 @@ With those data it is possible to compute an orientation quaternion,  later used
 
 ## Why 2 IMUs ?
 
-We used 2 IMUs in order to take the mean value, and therefore gain in accuracy.
-
-\(ajouter lien research on imus + graphe influence nombre et résultat\) 
+We used 2 IMUs in order to take the mean value, and therefore gain in accuracy. It is also possible to use least squares approximation.
 
 ## Raw IMU data computation
 
