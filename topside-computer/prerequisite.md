@@ -26,11 +26,11 @@ Topside computer must be at the address 192.168.2.1
 
 ## ROS package
 
-Get ROS package at : [https://github.com/cyrilcotsaftis/bluerov\_ros](https://github.com/cyrilcotsaftis/bluerov_ros)
+Get ROS package at : [https://github.com/cyrilcotsaftis/bluerov\_ros\_playground](https://github.com/cyrilcotsaftis/bluerov_ros_playground) and clone it in src/ folder of the 
 
 ```text
-git clone https://github.com/cyrilcotsaftis/bluerov_ros
-cd bluerov_ros
+git clone https://github.com/cyrilcotsaftis/bluerov_ros_playground
+cd bluerov_ros_playground
 git submodule update --init --recursive
 ```
 
@@ -41,7 +41,6 @@ This ROS package is build on the Patrick J. Pereira bluerov\_ros\_playground acc
 Then you will need to build the workspace.
 
 ```text
-cd PATH2ROSworkspace
 catkin build #if you use catkin build
 catkin_make  #if you use catkin_make
 ```

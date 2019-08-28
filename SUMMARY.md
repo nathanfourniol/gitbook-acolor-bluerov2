@@ -35,7 +35,7 @@
 
 * [Custom Ardusub 3.5](configure-new-frame/untitled.md)
 
-## Bibliographie
+## Bibliography
 
-* [Bibliography](bibliographie/bibliography.md)
+* [Bibliography](bibliography/bibliography.md)
 
