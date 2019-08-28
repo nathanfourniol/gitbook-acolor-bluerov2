@@ -38,7 +38,7 @@ Yet if you enable the controller in AUTOMATIC mode, it will send a constant pwm 
 
 ## PD controller
 
-The PD controller use the difference between depth calculated and depth desired, but also the derivative and the integrate value to compute a command in the interval \[-400,+400\]. This command is add to 1500, the pwm neutral of thrusters.
+The PD controller use the difference between velocity calculated and velocity desired, but also the derivative and the integrate value to compute a command in the interval \[-400,+400\]. This command is add to 1500, the pwm neutral of thrusters.
 
 ## Saturation
 
