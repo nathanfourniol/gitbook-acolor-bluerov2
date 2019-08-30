@@ -27,6 +27,12 @@ Otherwise you can install it with pip:
 pip install inputs
 ```
 
+## Logitech F310
+
+{% hint style="info" %}
+Be sure that the slider at the back of the controller is at D side
+{% endhint %}
+
 ## How it's working
 
 The inputs library provides API to handle the events from gamepad. Based on the event's name, a dictionary provide a link between the name of the event and the method to call. 
