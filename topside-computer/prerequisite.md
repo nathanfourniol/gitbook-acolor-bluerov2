@@ -17,7 +17,7 @@ Topside computer must be at the address 192.168.2.1
 * Python 2.7
 * PyMavlink
 * PyYAML
-* Opencv-Python
+* Opencv-Python \(only if you want to see camera with video script from bluerov\_ros\_playground\)
 * Numpy
 * [Inputs](https://github.com/zeth/inputs) 
 * [gi,gobject](https://wiki.ubuntu.com/Novacut/GStreamer1.0)
@@ -26,7 +26,7 @@ Topside computer must be at the address 192.168.2.1
 
 ## ROS package
 
-Get ROS package at : [https://github.com/cyrilcotsaftis/bluerov\_ros\_playground](https://github.com/cyrilcotsaftis/bluerov_ros_playground) and clone it in src/ folder of the 
+Get ROS package at : [https://github.com/cyrilcotsaftis/bluerov\_ros\_playground](https://github.com/cyrilcotsaftis/bluerov_ros_playground) and clone it in src/ folder of your ros workspace
 
 ```text
 git clone https://github.com/cyrilcotsaftis/bluerov_ros_playground
