@@ -31,7 +31,6 @@ Get ROS package at : [https://github.com/cyrilcotsaftis/bluerov\_ros\_playground
 ```text
 git clone https://github.com/cyrilcotsaftis/bluerov_ros_playground
 cd bluerov_ros_playground
-git submodule update --init --recursive
 ```
 
 {% hint style="info" %}
